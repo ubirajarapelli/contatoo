@@ -68,7 +68,21 @@ export default class AddContactView {
 
   createElement(params) {
     const { name, type, placeholder, minlength, pattern, required } = params
-
+    let inputmode
+    switch (name) {
+        case 'cpf':
+            inputmode = "numeric"
+            breake;
+        case 'phone':
+            inputmode = "tel"
+            break;
+        case 'email':
+            inputmode = "email"
+            break;
+        default:
+            inputmode = "text"
+            break;
+    }
     let div = document.createElement('div')
     let label = document.createElement('label')
     let input = document.createElement('input')
@@ -84,7 +98,7 @@ export default class AddContactView {
     input.required = required
     input.minLength = minlength
     input.pattern = pattern
-    input.inputMode = (name === 'cpf' || name === 'phone') ? 'numeric' : 'text'
+    input.inputMode = inputmode
     input.addEventListener('input', this.validField)
     input.addEventListener('blur', this.validButton.bind(this))
     input.addEventListener('blur', this.hasValue)

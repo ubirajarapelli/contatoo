@@ -84,6 +84,7 @@ export default class AddContactView {
     input.required = required
     input.minLength = minlength
     input.pattern = pattern
+    input.inputMode = (name === 'cpf' || name === 'phone') ? 'numeric' : 'text'
     input.addEventListener('input', this.validField)
     input.addEventListener('blur', this.validButton.bind(this))
     input.addEventListener('blur', this.hasValue)

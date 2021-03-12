@@ -72,7 +72,7 @@ export default class AddContactView {
     switch (name) {
         case 'cpf':
             inputmode = "numeric"
-            breake;
+            break;
         case 'phone':
             inputmode = "tel"
             break;

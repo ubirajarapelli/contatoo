@@ -1,0 +1,18 @@
+:root {
+  --brand-primary: 0, 200, 179;
+  --ss: rgb(239, 238, 237);
+  --ui-darker: 0, 0, 0;
+  --ui-base: 246, 246, 246; /* Botão Desabilitado BG */
+  --ui-lighter: 255, 255, 255;
+
+  --ui-text-dark:  51, 51, 51; /*  Cor da fonte com foco */
+  --ui-text-base: 239, 238, 237; /* Cor da fonte sem foco, Cor da borda */
+  --ui-text-light: 221, 220, 220; /* Botão Desabilitado font*/
+  --ui-error: 235, 74, 70; /* Input Inválido */
+
+  --font-size-large: 32px;
+  --font-size-medium: 24px;
+  --font-size-base: 16px;
+  --font-size-small: 12px;
+  --font-size-xsmall: 10px;
+}

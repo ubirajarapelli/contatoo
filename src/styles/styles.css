@@ -1,0 +1,81 @@
+@import "settings.css";
+@import "base.css";
+@import "components.css";
+
+@media(max-width: 414px) {
+  header h1 {
+    top: 1em;
+    left: 1em;
+    position: absolute;
+    width: 80%;
+    font-size: 1.4em;
+    font-weight: 600;
+  }
+  nav ul li {
+    width: 33%;
+  }
+}
+
+@media(min-width: 1263px) {
+  #layout {
+    grid-template-areas:
+    "header main"
+    "footer footer";
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 99% 1%;
+  }
+
+  main {
+    min-height: calc(100vh - 80px);
+    padding: 24px;
+    background-color: rgb(var(--ui-lighter));
+  }
+
+  header {
+    border-top-color: transparent;
+    border-right: 1px solid rgb(var(--ui-text-dark));
+  }
+
+  header h1 {
+    padding: 1em;
+    font-size: var(--font-size-large);
+    font-weight: 600;
+  }
+
+  nav ul {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  nav ul li::before {
+    margin-right: 1em;
+  }
+
+  nav ul li {
+    flex-direction: row;
+    margin-bottom: 1em;
+  }
+
+  nav ul li a {
+    font-size: 1em;
+    flex-direction: initial;
+  }
+  nav ul li a::before {
+    margin-right: 1em;
+  }
+
+  #contact-list {
+    margin: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #contact-list article {
+    width: 22%;
+    margin: 1.2em;
+  }
+
+  #contact-add {
+    width: 35%;
+  }
+}
